@@ -9,7 +9,7 @@ theme = "black"
 
 +++
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/flow.jpg" state="blur-animation"  transition="fade-in fade-out" >}}
 
 <script src="prism.js"></script>
 <link rel="stylesheet" href="prism.css">
@@ -23,19 +23,19 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/clocks.jpg" state="blur-animation"  transition="fade-in fade-out" >}}
 
 # What is time?
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/clocks.jpg" state="blur-animation"  transition="fade-in fade-out" >}}
 
 # Does time even exist?
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/clocks.jpg" state="blur-animation"  transition="fade-in fade-out" >}}
 
 # Between physics and philosophy
 
@@ -47,7 +47,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/relativity.jpg" state="blur-animation"  transition="fade-in fade-out" >}}
 
 # Between physics and philosophy
 
@@ -63,7 +63,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/relativity.jpg" state="blur-animation" transition="fade-in fade-out" >}}
 
 # Relational interpretation
 ## Quantum systems are observer-dependent
@@ -75,7 +75,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
 
 # Field based coordination
 
@@ -91,7 +91,7 @@ Mirko Viroli, Franco Zambonelli
 ---
 
 {{% section %}}
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
 
 # Field based coordination
 
@@ -107,7 +107,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
 
 # Field based coordination
 
@@ -120,7 +120,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
 
 # Field based coordination
 
@@ -132,7 +132,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
 
 # Field based coordination
 
@@ -147,7 +147,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
 
 # Field based coordination
 
@@ -164,7 +164,7 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/waves.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 # Challenge and desiderata
 
@@ -182,7 +182,7 @@ both in *communication* and *energy consumption*
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/waves.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 # Time-Fluid Field Coordination
 
@@ -198,7 +198,7 @@ driving the dynamics of application-level fields
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/waves.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 # Time-Fluid Field Coordination
 
@@ -213,7 +213,7 @@ driving the dynamics of application-level fields
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 # Time-Fluid Aggregate Computing
 
@@ -225,7 +225,7 @@ Prototype implementation [available](https://github.com/DanySK/Experiment-2020-C
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 ## Time-Fluid Aggregate Computing
 
@@ -248,7 +248,7 @@ let attendantsChanged = rep(old <- -1) {
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 ### Evaluation
 
@@ -256,7 +256,7 @@ let attendantsChanged = rep(old <- -1) {
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 ### Scenario
 
@@ -276,88 +276,23 @@ let attendantsChanged = rep(old <- -1) {
 
 ---
 
-{{< slide transition="fade" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in">}}
 
-Yellow: less rounds, red: more rounds 1/10
+#### <span style="color:yellow">Yellow: less rounds</span> --- <span style="color:red">red: more rounds</span>
 
 <img src="assets/freq01.png" width="50%" height="50%" />
 
 ---
 
-{{< slide transition="none" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-out">}}
 
-Yellow: less rounds, red: more rounds 2/10
+#### <span style="color:yellow">Yellow: less rounds</span> --- <span style="color:red">red: more rounds</span>
 
-<img src="assets/freq02.png" width="50%" height="50%" />
-
----
-
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 3/10
-
-<img src="assets/freq03.png" width="50%" height="50%" />
+<img src="assets/animation.gif" width="50%" height="50%" />
 
 ---
 
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 4/10
-
-<img src="assets/freq04.png" width="50%" height="50%" />
-
----
-
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 5/10
-
-<img src="assets/freq05.png" width="50%" height="50%" />
-
----
-
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 6/10
-
-<img src="assets/freq06.png" width="50%" height="50%" />
-
----
-
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 7/10
-
-<img src="assets/freq07.png" width="50%" height="50%" />
-
----
-
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 8/10
-
-<img src="assets/freq08.png" width="50%" height="50%" />
-
----
-
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 9/10
-
-<img src="assets/freq09.png" width="50%" height="50%" />
-
----
-
-{{< slide transition="none" >}}
-
-Yellow: less rounds, red: more rounds 10/10
-
-<img src="assets/freq10.png" width="50%" height="50%" />
-
-
----
-
-{{< slide transition="fade" background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 ### Speed = 0
 
@@ -368,7 +303,7 @@ similar error, much lower energy cost
 
 ---
 
-{{< slide transition="fade" background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 ### Speed = 2
 
@@ -379,7 +314,7 @@ lower error *and* energy cost
 
 ---
 
-{{< slide transition="fade" background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 ### Speed = 5
 
@@ -390,7 +325,7 @@ lower error *and* energy cost
 
 ---
 
-{{< slide transition="fade" background-image="assets/bg.png" >}}
+{{< slide background-image="assets/dark.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
 
 ### Speed = 10
 
@@ -401,7 +336,7 @@ lower error *and* energy cost
 
 ---
 
-{{< slide background-image="assets/bg.png" >}}
+{{< slide background-image="assets/flow.jpg" state="blur-animation"  transition="fade-in fade-out" >}}
 
 # Time-Fluid Field Coordination
 
