@@ -90,8 +90,9 @@ Mirko Viroli, Franco Zambonelli
 
 ---
 
-{{% section %}}
 {{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
+
+{{% section %}}
 
 # Field based coordination
 
