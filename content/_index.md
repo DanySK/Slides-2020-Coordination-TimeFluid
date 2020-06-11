@@ -246,12 +246,11 @@ import platform.EventType.* // Event types are provided by the hosting platform
 let reason = env.get("platform.event") // Sensor-like access to the triggering event
 // Policy guards are full fledged aggregate programs
 let peopleCount = foldSum(nbr(env.get("people_count")))
-let attendantsChanged = rep(old <- -1) {
-  if (old != peopleCount) { peopleCount } else { old }
-} == peopleCount
+let lastCount = rep(s <- [0, 0]) { [s.get(1), peopleCount] }.get(0)
+let attendantsChanged = lastCount != peopleCount
 [ // A policy returns a pair of:
   // A boolean, deciding whether the guarded program should run
-  reason == MESSAGE_TIMEOUT || reason == MESSAGE_RECEIVED || rep(count <->),
+  reason == MESSAGE_TIMEOUT || reason == MESSAGE_RECEIVED || attendantsChanged,
   [MESSAGE_RECEIVED, SENSOR("people_count")] // A list of accepted future triggering events
 ]
 ```
