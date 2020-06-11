@@ -12,8 +12,37 @@ theme = "black"
 {{< slide background-image="assets/flow.jpg" state="blur-animation"  transition="fade-in fade-out" >}}
 
 <script src="prism.js"></script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 <link rel="stylesheet" href="prism.css">
 <link rel="stylesheet" href="blur.css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    // Fix <code> tags after MathJax finishes running. This is a
+    // hack to overcome a shortcoming of Markdown. Discussion at
+    // https://github.com/mojombo/jekyll/issues/199
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
 
 # [Time-fluid field-based coordination](https://danysk.github.io/Slides-2020-Coordination-TimeFluid/)
 
@@ -92,8 +121,6 @@ Mirko Viroli, Franco Zambonelli
 
 {{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
 
-{{% section %}}
-
 # Field based coordination
 
 ## *Dealing with time*
@@ -105,46 +132,6 @@ Mirko Viroli, Franco Zambonelli
   * **reactive** e.g., in *TOTA*
   * **proactive**/**timed** e.g., in *Aggregate computing*
   * **abstracted away** e.g., in *Fixpoint-based computational fields*
-
----
-
-{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
-
-# Field based coordination
-
-## *Dealing with time in*
-## **TOTA**
-
-* Asynchronous
-* Event-based
-* Reactive to changes in network connectivity
-
----
-
-{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
-
-# Field based coordination
-
-## *Dealing with time in*
-## **Fixpoint-based computational fields**
-
-* Focus on "eventual behavior"
-* Mostly neglected / abstracted away
-
----
-
-{{< slide background-image="assets/networking.jpg" state="blur-animation"  transition="fade-in fade-out">}}
-
-# Field based coordination
-
-## *Dealing with time in*
-## **Aggregate Computing**
-
-* External, local proactive clock
-* Loosely synchronous
-  * Devices should run at a "similar" frequency
-
-{{% /section %}}
 
 ---
 
@@ -197,14 +184,30 @@ driving the dynamics of application-level fields
 
 # Time-Fluid Field Coordination
 
-* Define a set of **platform triggers**
+* Define a set of **platform triggers `$ \mathcal{T} $`**
   * including *timers* and *results of field computations*
-* Associate a **guard policy** to every field program 
+* Associate a **guard policy `$ \mathbf{G} $`** to every **field program `$ \mathbf{P} $`**
   * *inheriting the language* of the field program itself
-  * declaring a set of triggers as its *domain*
-  * evaluation to `true` causes an immediate\
-   *execution of the associated program*
-* The guard policy domain is the **causality field**
+  * **`$ \mathbf{G} $`**'s evaluation produces a *boolean* **`$b$`** and a *set* **`$T_c\subseteq\mathcal{T}$`** 
+    * **`$b$`** determines whether **`$ \mathbf{P} $`** should *execute immediately*
+    * **`$T_c$`** is the **causality field**
+  * **`$ \mathbf{P} $`** will get *evaluated next* if an *event `$t\in$`* **`$T_c$`** happens
+* At bootstrap, all policies are evaluated.
+
+---
+
+{{< slide background-image="assets/waves.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
+
+# Time-Fluid Field Coordination
+
+**`$ \mathbf{P} $`** produces a local field value by consuming:
+  * *messages* from neighbors *`$M\in\mathcal{M}$`*
+  * *contextual information* (e.g., sensor readings) *`$S\in\mathcal{S}$`*
+
+**`$ \mathbf{G} $`** is a field computation locally modeled as:
+**`$$f_G\colon{}(\mathcal{S}, \mathcal{M})\to(\{0, 1\}, \mathcal{T}^{2})$$`**
+* Access to *`$M$`* and *`$S$`* and the ability to produce  **`$T_c\in\mathcal{T}^{2}$`**\
+  have crucial impact on the expressivity of **`$ \mathbf{G} $`**
 
 ---
 
