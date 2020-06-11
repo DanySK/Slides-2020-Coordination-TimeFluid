@@ -128,7 +128,7 @@ Mirko Viroli, Franco Zambonelli
 ## *Dealing with time in*
 ## **Fixpoint-based computational fields**
 
-* Focus on "eventual behaviour"
+* Focus on "eventual behavior"
 * Mostly neglected / abstracted away
 
 ---
@@ -175,7 +175,7 @@ Fine grained control over **transient dynamics** \
 enables improved **reactivity** to changes as well as **efficiency** \
 both in *communication* and *energy consumption*
 
-## *Requisites*
+## *Requirement*
 
 * **do not** force the designer to **lower** the **abstraction level**
 * **do** support **all the existing** coordination mechanisms
@@ -187,15 +187,24 @@ both in *communication* and *energy consumption*
 
 # Time-Fluid Field Coordination
 
-> leverage *field-based coordination itself* and maintain a **causality field** \
+> leverage *field-based coordination itself* and maintain a\
+**causality field** \
 driving the dynamics of application-level fields
 
-* Define a set of *platform triggers* (including *timers*) as event sources
-* Associate a *guard policy* to every field program 
+---
+
+{{< slide background-image="assets/waves.jpg"  state="blur-animation"  transition="fade-in fade-out">}}
+
+# Time-Fluid Field Coordination
+
+* Define a set of **platform triggers**
+  * including *timers* and *results of field computations*
+* Associate a **guard policy** to every field program 
   * *inheriting the language* of the field program itself
+  * declaring a set of triggers as its *domain*
+  * evaluation to `true` causes an immediate\
+   *execution of the associated program*
 * The guard policy domain is the **causality field**
-* Allow results of *field computations* to *cause* other field computations
-  * computation results are triggers themselves
 
 ---
 
